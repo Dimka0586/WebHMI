@@ -1,3 +1,6 @@
 *.iml
 .idea/
+dao/target
+model/target
+controller/target
 !.gitignore
