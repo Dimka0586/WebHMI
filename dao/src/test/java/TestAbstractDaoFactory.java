@@ -1,5 +1,9 @@
 import com.plant.PLC.DAOFactoryPLC;
 import com.plant.PLC.ModbusTCPDAOFactory;
+import com.plant.PLC.ModbusTCPStatDepPLC;
+import com.plant.PLC.StatDepPLCDAO;
+import com.plant.StatDepPLC;
+import com.plant.impl.PLC.StatDepPLCDAOImpl;
 import net.wimpi.modbus.procimg.Register;
 
 /**
@@ -20,5 +24,12 @@ public class TestAbstractDaoFactory {
         for (int i = 0; i < floats.length; i++){
             System.out.println(floats[i]);
         }
+        StatDepPLCDAO statDepPLCDAO = new ModbusTCPStatDepPLC(modbusTCPDAOFactory);
+        StatDepPLC statDepPLC = statDepPLCDAO.readByRef(addr, 50);
+
+        System.out.println(statDepPLC);
+        System.out.println(statDepPLCDAO);
+        System.out.println(statDepPLC.getHour());
+
     }
 }

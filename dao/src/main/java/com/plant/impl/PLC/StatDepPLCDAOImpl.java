@@ -9,12 +9,13 @@ import com.plant.StatDepPLC;
 public class StatDepPLCDAOImpl implements StatDepPLCDAO {
 
     @Override
-    public StatDepPLC readMultiByRef(String addrPLC, int ref, int count) {
+    public StatDepPLC readByRef(String addr, int ref) {
+
         return null;
     }
 
     @Override
-    public void writeMultiByRef(String addrPLC, int ref, StatDepPLC[] writeData) {
+    public void writeByRef(String addrPLC, int ref, StatDepPLC[] writeData) {
 
     }
 }

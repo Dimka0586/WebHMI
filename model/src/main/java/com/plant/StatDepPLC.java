@@ -6,8 +6,6 @@ package com.plant;
 public class StatDepPLC {
 
 
-    private int ref;
-
     private float hour;
     private float oldHour;
     private float shift;
@@ -21,15 +19,7 @@ public class StatDepPLC {
     private float season;
     private boolean clear;
 
-
-
-    public StatDepPLC(int ref) {
-        this.ref = ref;
-    }
-
-    public int getRef() {
-
-        return ref;
+    public StatDepPLC() {
     }
 
     public float getHour() {
@@ -80,10 +70,6 @@ public class StatDepPLC {
         return clear;
     }
 
-    public void setRef(int ref) {
-        this.ref = ref;
-    }
-
     public void setHour(float hour) {
         this.hour = hour;
     }
@@ -131,6 +117,5 @@ public class StatDepPLC {
     public void setClear(boolean clear) {
         this.clear = clear;
     }
-
 
 }

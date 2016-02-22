@@ -5,7 +5,7 @@ package com.plant.PLC;
  */
 public interface GenericPLC<T> {
 
-    public T readMultiByRef(String addrPLC, int ref, int count);
-    public void writeMultiByRef(String addrPLC, int ref, T[] writeData);
+    public T readByRef(String addrPLC, int ref);
+    public void writeByRef(String addrPLC, int ref, T[] writeData);
 
 }
